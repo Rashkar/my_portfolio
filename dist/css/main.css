@@ -192,6 +192,25 @@ main {
       border-color: #e0c10f;
       transition: all 0.5s ease-out; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5 rem 1.5rem;
+      background: #e0c10f;
+      color: set-text-color(#e0c10f); }
+      .boxes div:hover span {
+        color: set-text-color(#e0c10f); }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
@@ -218,11 +237,11 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); } }
+    grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); } }
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -254,7 +273,7 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); } }
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -265,4 +284,4 @@ main {
       margin-top: 1rem;
       font-size: 5rem; }
   .projects {
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); } }
+    grid-template-columns: 1fr; } }
